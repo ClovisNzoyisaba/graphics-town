@@ -1,0 +1,97 @@
+Wisc ID: nzoyisaba
+GitHub ID: ClovisNzoyisaba
+
+[ ] correct P2 Canvas Assignment submission on time [none]: 
+[X] completed p2-workbook.txt in the for_student folder correctly [none]: 
+[X] clear explanations in p1-workbook.txt [none]: 
+[X] program runs (or seems to run correctly - worth looking at error console) [final-grtown]: 
+[X] frame rate seems OK (not too slow) [final-grtown]: 
+[X] UI is there and seems to work (can lookat and ride) [final-grtown]: 
+[X] highlight list looks OK [final-grtown]: 
+[X] visually distinct from example [final-grtown]: 
+[X] theme makes sense (need explanation) [final-grtown]: I tried to recreate a small part of downtown chicago, so it made sense to include skyskrapers, and the metro train, roads, and other stuff. The ferris wheel location represents a tourist attraction called navy pier.
+[ ] cool theme bonus (need explanation) [final-grtown]: 
+[X] objects created for this assignment 1, not trivial, can be identified in world (need explanation) [final-grtown]: I created the train track object for this assignment
+[X] objects created for this assignment 2, not trivial, can be identified in world (need explanation) [final-grtown]: I created the skyskrapers for this assignment
+[X] 5 more kinds of objects 1, not trivial, can identify (need explanation) [final-grtown]: I created the benches
+[X] 5 more kinds of objects 2, not trivial, can identify (need explanation) [final-grtown]: I created the buoys, the bobbing spherical objects in the water
+[X] 5 more kinds of objects 3, not trivial, can identify (need explanation) [final-grtown]: I created the trees
+[X] 5 more kinds of objects 4, not trivial, can identify (need explanation) [final-grtown]: I created the ferris wheel
+[X] 5 more kinds of objects 5, not trivial, can identify (need explanation) [final-grtown]: I created the boat
+[X] has building, natural, vehicle (need explanation) [final-grtown]: the buildings are the skyskrapers, the natural objects are the trees, and the vehicles are the train, cars and boat
+[X] loaded model (need explanation) [final-grtown]: The train is the loaded model
+[X] shader: identifiable and not trivial (need explanation) [final-grtown]: The water has the shader. I made waves using sin and cosin
+[X] three behaviors you made 1, not trivial, can be identified in scene (need explanation) [final-grtown]: The cars move back and forth, and stop in the middle before a stop sign
+[X] three behaviors you made 2, not trivial, can be identified in scene (need explanation) [final-grtown]: The train follows a curve aorund the city
+[X] three behaviors you made 3, not trivial, can be identified in scene (need explanation) [final-grtown]:  The ferris wheel rotates, moving the cabins along with it
+[X] at least one object is rideable / followable [final-grtown]: cars, boat, and train is rideable/followable
+[X] behavior that is not simple (need explanation) [final-grtown]: The boat follows a curve, moves it's paddles back and forth and stops at 2 locations
+[X] articulated figure (need explanation) [final-grtown]: The ferris wheel is articulated, because the cabins move in relation to the wheel
+[ ] advanced thing 1: has a challenge type (need the name and number from the list) [final-grtown]: 
+[ ] advanced thing 1: works properly, can be identified in the town (need explanation) [final-grtown]: 
+[ ] advanced thing 1: points above and beyond (need explanation) [final-grtown]: 
+[ ] advanced thing 2: has a challenge type (need the name and number from the list) [final-grtown]: 
+[ ] advanced thing 2: works properly, can be identified in the town (need explanation) [final-grtown]: 
+[ ] advanced thing 2: points above and beyond (need explanation) [final-grtown]: 
+[ ] advanced thing 3: has a challenge type (need the name and number from the list) [final-grtown]: 
+[ ] advanced thing 3: works properly, can be identified in the town (need explanation) [final-grtown]: 
+[ ] advanced thing 3: points above and beyond (need explanation) [final-grtown]: 
+[ ] advanced thing 4: has a challenge type (need the name and number from the list) [final-grtown]: 
+[ ] advanced thing 4: works properly, can be identified in the town (need explanation) [final-grtown]: 
+[ ] advanced thing 4: points above and beyond (need explanation) [final-grtown]: 
+[ ] advanced thing 5: has a challenge type (need the name and number from the list) [final-grtown]: 
+[ ] advanced thing 5: works properly, can be identified in the town (need explanation) [final-grtown]: 
+[ ] advanced thing 5: points above and beyond (need explanation) [final-grtown]: 
+
+
+theme makes sense (need explanation) [final-grtown]: 
+    I tried to recreate a small part of downtown chicago, so it made sense to include skyskrapers, and the metro train, roads, and other stuff
+    The ferris wheel location represents a tourist attraction called navy pier.
+
+objects created for this assignment 1, not trivial, can be identified in world (need explanation) [final-grtown]: 
+    I created the train track object for this assignment
+
+objects created for this assignment 2, not trivial, can be identified in world (need explanation) [final-grtown]:
+    I created the skyskrapers for this assignment
+
+5 more kinds of objects 1, not trivial, can identify (need explanation) [final-grtown]: 
+    I created the the benches
+
+5 more kinds of objects 2, not trivial, can identify (need explanation) [final-grtown]:
+    I created the buoys, the bobbing spherical objects in the water
+
+5 more kinds of objects 3, not trivial, can identify (need explanation) [final-grtown]:
+    I created the trees
+
+5 more kinds of objects 4, not trivial, can identify (need explanation) [final-grtown]:
+    I created the ferris wheel
+
+5 more kinds of objects 5, not trivial, can identify (need explanation) [final-grtown]: 
+    I created the boat
+
+has building, natural, vehicle (need explanation) [final-grtown]:
+    the buildings are the skyskrapers, the natural objects are the trees, and the vehicles are the train, cars and boat
+
+loaded model (need explanation) [final-grtown]: 
+    The train is the loaded model
+
+shader: identifiable and not trivial (need explanation) [final-grtown]:
+    The water has the shader. I made waves using sin and cosin
+
+three behaviors you made 1, not trivial, can be identified in scene (need explanation) [final-grtown]: 
+    The cars move back and forth, and stop in the middle before a stop sign
+
+three behaviors you made 2, not trivial, can be identified in scene (need explanation) [final-grtown]:
+    The train follows a curve aorund the city
+
+three behaviors you made 3, not trivial, can be identified in scene (need explanation) [final-grtown]: 
+    The ferris wheel rotates, moving the cabins along with it
+
+at least one object is rideable / followable [final-grtown]: 
+    cars, boat, and train is rideable/followable
+
+behavior that is not simple (need explanation) [final-grtown]: 
+    The boat follows a curve, moves it's paddles back and forth and stops at 2 locations
+
+articulated figure (need explanation) [final-grtown]: 
+    The ferris wheel is articulated, because the cabins move in relation to the wheel
