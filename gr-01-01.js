@@ -66,7 +66,7 @@ let waterHeight = 1;
 let waterDepth = 50;
 let waterGeometry = new T.BoxGeometry(waterWidth, waterHeight, waterDepth);
 
-let shaderMat = shaderMaterial("./Shaders/vertexshader.vs", "./Shaders/watershader.fs", {
+let shaderMat = shaderMaterial("./for_students/Shaders/vertexshader.vs", "./for_students/Shaders/watershader.fs", {
     side: T.DoubleSide,
     uniforms: {
         uTime: { value: 0.0 }
