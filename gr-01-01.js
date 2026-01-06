@@ -14,24 +14,24 @@
  * (in other files), then loading those files as modules, and using this
  * file to instantiate those objects in the world.
  */
-import * as T from "../libs/CS559-Three/build/three.module.js";
-import { GrWorld } from "../libs/CS559-Framework/GrWorld.js";
-import { WorldUI } from "../libs/CS559-Framework/WorldUI.js";
+import * as T from "./libs/CS559-Three/build/three.module.js";
+import { GrWorld } from "./libs/CS559-Framework/GrWorld.js";
+import { WorldUI } from "./libs/CS559-Framework/WorldUI.js";
 
 // import {main} from "../examples/main.js";
 
-import {Train} from "./Objects/train.js";
-import {TrainTrack} from "./Objects/traintrack.js";
-import {Skyscraper} from "./Objects/skyskraper.js";
-import {FerrisWheel} from "./Objects/ferriswheel.js";
-import { shaderMaterial } from "../libs/CS559-Framework/shaderHelper.js";
-import { GrObject } from "../libs/CS559-Framework/GrObject.js";
-import { Bench } from "./Objects/bench.js";
-import { Tree } from "./Objects/tree.js";
-import { Car } from "./Objects/car.js";
-import { StopSign } from "./Objects/stopsign.js";
-import {Buoy} from "./Objects/buoy.js";
-import { Boat } from "./Objects/boat.js";
+import {Train} from "./for_students/Objects/train.js";
+import {TrainTrack} from "./for_students/Objects/traintrack.js";
+import {Skyscraper} from "./for_students/Objects/skyskraper.js";
+import {FerrisWheel} from "./for_students/Objects/ferriswheel.js";
+import { shaderMaterial } from "./libs/CS559-Framework/shaderHelper.js";
+import { GrObject } from "./libs/CS559-Framework/GrObject.js";
+import { Bench } from "./for_students/Objects/bench.js";
+import { Tree } from "./for_students/Objects/tree.js";
+import { Car } from "./for_students/Objects/car.js";
+import { StopSign } from "./for_students/Objects/stopsign.js";
+import {Buoy} from "./for_students/Objects/buoy.js";
+import { Boat } from "./for_students/Objects/boat.js";
 
 
 /**m
