@@ -1,3 +1,9 @@
+### Live Three.js Demo
+Check out the interactive demo of my Three.js project here:  
+[https://lustrous-otter-095a03.netlify.app](https://lustrous-otter-095a03.netlify.app)
+
+---
+
 **warning: use the "main" branch - the master branch is just for legacy compatibility"
 
 # CS 559 Library for Workbooks
