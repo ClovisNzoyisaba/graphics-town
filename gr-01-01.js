@@ -44,6 +44,7 @@ let world = new GrWorld({
     width: 800,
     height: 600,
     groundplane: false, // make the ground plane big enough for a world of stuff
+    // @ts-ignore
     lookfrom: new T.Vector3(100, 30, -20), // where the camera starts
 });
 
@@ -55,8 +56,11 @@ let world = new GrWorld({
 let groundWidth = 55
 let groundHeight = 5
 let groundDepth = 50
+// @ts-ignore
 let groundGeometry = new T.BoxGeometry(groundWidth, groundHeight, groundDepth);
+// @ts-ignore
 let groundMaterial = new T.MeshStandardMaterial({ color: "SaddleBrown" });
+// @ts-ignore
 let ground = new T.Mesh(groundGeometry, groundMaterial);
 ground.position.set(-10, 0, 0); // position the ground below the origin
 world.scene.add(ground);
@@ -64,18 +68,21 @@ world.scene.add(ground);
 let waterWidth = 50;
 let waterHeight = 1;
 let waterDepth = 50;
+// @ts-ignore
 let waterGeometry = new T.BoxGeometry(waterWidth, waterHeight, waterDepth);
 
-
-let shaderMat = shaderMaterial("./for_students/Shaders/vertexshader.vs", "./for_students/Shaders/watershader.fs", {
+let shaderMat = shaderMaterial("/for_students/Shaders/vertexshader.vs", "/for_students/Shaders/watershader.fs", {
+    // @ts-ignore
     side: T.DoubleSide,
     uniforms: {
         uTime: { value: 0.0 }
     }
   });
 
+// @ts-ignore
 let waterMesh = new T.Mesh(waterGeometry, shaderMat);
 let water = new GrObject("water", waterMesh);
+// @ts-ignore
 water.stepWorld = function(delta, timeOfDay) {
     this.objects[0].material.uniforms.uTime.value += delta / 1000;
 };
@@ -87,18 +94,22 @@ let beachWidth = 4;
 let beachHeight = groundHeight - waterHeight;
 let beachDepth = 50;
 
+// @ts-ignore
 let beachShape = new T.Shape();
 beachShape.moveTo(0, 0);
 beachShape.lineTo(beachWidth, -beachHeight);
 beachShape.lineTo(0, -beachHeight);
 beachShape.lineTo(0, 0);
 
+// @ts-ignore
 let beachGeometry = new T.ExtrudeGeometry(beachShape, { depth: beachDepth, bevelEnabled: false });
+// @ts-ignore
 let beachMaterial = new T.MeshStandardMaterial({ 
     color: "sandybrown", // color of the beach
     roughness: 0.4,
     metalness: 0.1
 });
+// @ts-ignore
 let beach = new T.Mesh(beachGeometry, beachMaterial);
 beachGeometry.center(); // center the geometry around the origin
 beach.position.set(-10 + groundWidth/2 + beachWidth/2, waterHeight/2, 0);
@@ -106,24 +117,32 @@ beach.position.set(-10 + groundWidth/2 + beachWidth/2, waterHeight/2, 0);
 
 world.scene.add(beach);
 
+// @ts-ignore
 let pier = new T.Group();
 let pierWidth = 20;
 let pierHeight = 1;
 let pierDepth = 10;
+// @ts-ignore
 let pierGeometry = new T.BoxGeometry(pierWidth, pierHeight, pierDepth);
+// @ts-ignore
 let pierMaterial = new T.MeshStandardMaterial({ color: "saddlebrown" });
+// @ts-ignore
 let pierMesh = new T.Mesh(pierGeometry, pierMaterial);
 pierMesh.position.set(-10 + groundWidth/2 + pierWidth/2, groundHeight/2 - pierHeight/2, 0)
 pier.add(pierMesh);
 
 let pierLegsHeight = groundHeight - pierHeight;
 let pierLegsRadius = 0.5; // radius of the pier legs
+// @ts-ignore
 let pierLegsGeometry = new T.CylinderGeometry(pierLegsRadius, pierLegsRadius, pierLegsHeight, 32);
+// @ts-ignore
 let pierLegsMaterial = new T.MeshStandardMaterial({ color: "saddlebrown" });
 
 for (let i = 0; i < Math.floor(pierWidth/2); i++) {
     let t = i / Math.floor(pierWidth/2); 
+    // @ts-ignore
     let leftPierLegs = new T.Mesh(pierLegsGeometry, pierLegsMaterial);
+    // @ts-ignore
     let rightPierLegs = new T.Mesh(pierLegsGeometry, pierLegsMaterial);
     
     leftPierLegs.position.set(-10 + groundWidth/2 + t * pierWidth, groundHeight/2 - pierHeight/2 - pierLegsHeight/2, -pierDepth/2 + 0.5);
@@ -138,23 +157,30 @@ world.scene.add(pier);
 let grassWidth = 5
 let grassDepth = groundDepth;
 let grassHeight = 0.05; // offset to place grass slightly above the ground
+// @ts-ignore
 let grassGeometry = new T.BoxGeometry(grassWidth,grassHeight, grassDepth) // thin box for grass
 
+// @ts-ignore
 let grassMaterial = new T.MeshStandardMaterial({ 
     color: "green",
 });
 
+// @ts-ignore
 let grassMesh = new T.Mesh(grassGeometry, grassMaterial);
 grassMesh.position.set(2, groundHeight/2 + 0.05, 0); // position the grass on top of the ground;
 
 world.scene.add(grassMesh);
 
+// @ts-ignore
 let road = new T.Group();
 let roadWidth = 13;
 let roadHeight = 0.05; // offset to place road slightly above the ground
 let roadDepth = groundDepth;
+// @ts-ignore
 let roadGeometry = new T.BoxGeometry(roadWidth, roadHeight, roadDepth); // thin box for road
+// @ts-ignore
 let roadMaterial = new T.MeshStandardMaterial({ color: "black" });
+// @ts-ignore
 let roadMesh = new T.Mesh(roadGeometry, roadMaterial);
 // position road after grass
 roadMesh.position.set(2+grassWidth/2 + roadWidth/2, groundHeight/2 + 0.05, 0); // position the road on top of the grass
@@ -163,11 +189,14 @@ road.add(roadMesh);
 let roadLineWidth = 0.2; // width of the road line
 let roadLineHeight = 0.01; // height of the road line
 
+// @ts-ignore
 let roadLineGeometry = new T.BoxGeometry(roadLineWidth, roadLineHeight, roadDepth); // thin box for road line
+// @ts-ignore
 let roadLineMaterial = new T.MeshStandardMaterial({ color: "white" });
 // create dashed road lines
 for (let i = -roadWidth/2 + 0.5; i < roadWidth/2; i += 1) {
     if (i % 2 === 0) { // create dashed lines every 2 units
+        // @ts-ignore
         let roadLineMesh = new T.Mesh(roadLineGeometry, roadLineMaterial);
         roadLineMesh.position.set(2+grassWidth/2 + roadWidth/2 + i, groundHeight/2 + 0.1, 0); // position the road line on top of the road
         road.add(roadLineMesh);
@@ -179,11 +208,14 @@ world.scene.add(road);
 let cityFloorHeight = 0.05
 let cityFloorWidth = groundWidth - grassWidth - roadWidth;
 let cityFloorDepth = groundDepth; // same depth as the ground
+// @ts-ignore
 let cityFloorGeometry = new T.BoxGeometry(cityFloorWidth, cityFloorHeight, cityFloorDepth); // thin box for city floor
 
+// @ts-ignore
 let cityFloorMaterial = new T.MeshStandardMaterial({ 
     color: "gray",
 });
+// @ts-ignore
 let cityFloorMesh = new T.Mesh(cityFloorGeometry, cityFloorMaterial);
 cityFloorMesh.position.set(-10 - groundWidth/2 + cityFloorWidth/2, groundHeight/2 + cityFloorHeight/2, 0); // position the city floor on top of the road
 
@@ -196,11 +228,17 @@ ferrisWheel.objects[0].rotation.y = Math.PI / 2; // rotate the ferris wheel to f
 world.add(ferrisWheel);
 
 let trackPoints = [
+    // @ts-ignore
     new T.Vector3(-9, 10, -20),   // Bottom-right
+    // @ts-ignore
     new T.Vector3(-9, 10, 20),    // Top-right
+    // @ts-ignore
     new T.Vector3(-18, 10, 24),   // Top-center-left curve
+    // @ts-ignore
     new T.Vector3(-24, 10, 20),   // Top-left
+    // @ts-ignore
     new T.Vector3(-24, 10, -20),  // Bottom-left
+    // @ts-ignore
     new T.Vector3(-18, 10, -24),  // Bottom-center-left curve
   ];
 
@@ -283,11 +321,17 @@ let superSkyskraperTop = new Skyscraper({ width: 4, depth: 4, floors: 10, color:
 superSkyskraperTop.objects[0].position.set(-17, groundHeight/2 + 15, -15);
 world.add(superSkyskraperTop);
 
+// @ts-ignore
 let boatPath = new T.CatmullRomCurve3([
+    // @ts-ignore
     new T.Vector3(-10 + groundWidth/2 + pierWidth/2, -groundHeight/2 + waterHeight/2 + 1, -10),
+    // @ts-ignore
     new T.Vector3(-10 + groundWidth/2 + pierWidth/2 + waterWidth/4, -groundHeight/2 + waterHeight/2 + 1, -10),
+    // @ts-ignore
     new T.Vector3(-10 + groundWidth/2 + pierWidth/2 + waterWidth/3, -groundHeight/2 + waterHeight/2 + 1, 0),
+    // @ts-ignore
     new T.Vector3(-10 + groundWidth/2 + pierWidth/2 + waterWidth/4, -groundHeight/2 + waterHeight/2 + 1, 10),
+    // @ts-ignore
     new T.Vector3(-10 + groundWidth/2 + pierWidth/2, -groundHeight/2 + waterHeight/2 + 1, 10),
 ]);
 
@@ -297,6 +341,7 @@ boat.objects[0].rotation.y = Math.PI / 2; // rotate the boat to face the water
 
 world.add(boat);
 
+// @ts-ignore
 const ambientLight = new T.AmbientLight(0xffffff, 0.8);
 world.scene.add(ambientLight);
 
@@ -305,6 +350,7 @@ world.scene.add(ambientLight);
 ///////////////////////////////////////////////////////////////
 // because I did not store the objects I want to highlight in variables, I need to look them up by name
 // This code is included since it might be useful if you want to highlight your objects here
+// @ts-ignore
 function highlight(obName) {
     const toHighlight = world.objects.find(ob => ob.name === obName);
     if (toHighlight) {
